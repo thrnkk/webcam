@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="icone.png"/>
+    <script type="text/javascript" src="webcamjs/webcam.min.js"></script>
+</head>
+<body>
+    <div id="holder" class="image-holder">
+        <img src="./mirror.png">
+        <div id="my_camera"></div>
+    </div>
+    <div class="social">
+        <div class="instagram">
+            <img src="https://www.pngmart.com/files/22/Black-And-White-Instagram-Logo-PNG-File.png">
+            <span>@gmarie_arts</span>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    Webcam.set({
+        width: 320,
+        height: 240,
+        image_format: 'jpeg',
+        jpeg_quality: 90
+    });
+
+    Webcam.attach( '#my_camera' );
+
+    const camera = document.getElementById('my_camera');
+    camera.style.zIndex = 1;
+
+    window.scrollBy(0,100);
+
+    window.onscroll = function() {
+        window.scrollTo(0, 275);
+    };
+</script>
